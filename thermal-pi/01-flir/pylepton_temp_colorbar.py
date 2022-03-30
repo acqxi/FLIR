@@ -69,8 +69,8 @@ with Lepton() as l:
 
         w = 1
         h = 1
-        x3 = int(80 / 4 * 2 - w)
-        y3 = int(60 / 4 * 2 - h)
+        x3 = int(160 / 4 * 2 - w)
+        y3 = int(120 / 4 * 2 - h)
         
         cv2.rectangle(res, (x3 * 4, y3 * 4), ((x3 + w) * 4, (y3 + h) * 4), (0, 0, 255), -1)
         lepton_temp3 = lepton_temp[y3:y3+h, x3:x3+w]
