@@ -197,7 +197,7 @@ while True:
     for i in range( len( tnfm_obj ) ):
         if tnfm_obj[ i ][ 0 ] < 0 or tnfm_obj[ i ][ 1 ] < 0:  #or tnfm_obj[ i ][ 0 ] > size or tnfm_obj[ i ][ 1 ] > size:
             continue
-        print( f"{tnfm_obj[i][0]=}" )
+        # print( f"{tnfm_obj[i][0]=}" )
         for j in range( i + 1, len( tnfm_obj ) ):
             if tnfm_obj[ j ][ 0 ] < 0 or tnfm_obj[ j ][ 1 ] < 0:  #or tnfm_obj[ j ][ 0 ] > size or tnfm_obj[ j ][ 1 ] > size:
                 continue
