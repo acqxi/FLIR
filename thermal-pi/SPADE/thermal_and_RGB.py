@@ -95,6 +95,7 @@ def main():
                 with HiddenPrints():
                     a, _ = leptonCap.capture()
                 cv2.normalize( a, a, 0, 65535, cv2.NORM_MINMAX )
+                nz_a = a.copy()
                 np.right_shift( a, 8, a )
                 _a = np.asarray( a, np.uint8 )
 
@@ -121,6 +122,7 @@ def main():
 
                 if recording:
                     cv2.imwrite( os.path.join( dir_path, f'{frame_num:05}.png' ), _a, [ cv2.IMWRITE_PNG_COMPRESSION, 0 ] )
+                    np.save( f'{frame_num:05}', nz_a )
                     cv2.imwrite(
                         os.path.join( dir_path, f'{frame_num:05}.jpg' ), cv2.resize( crop_img2, ( 512, 384 ) ),
                         [ cv2.IMWRITE_JPEG_QUALITY, 90 ] )
